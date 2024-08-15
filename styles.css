@@ -1,0 +1,252 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+  html {
+    font-size: 62.5%;
+    object-fit: contain;
+  }
+  .first-paragraph::first-letter {
+    font-size: 5rem;
+    color: orangered;
+    float: left;
+    margin-right: 1rem;
+  }
+ body {
+    font-family: 'Baskervville', serif;
+    color: rgb(242, 238, 236);
+    background-color: rgb(16, 1, 32); 
+    justify-content: center 
+  }
+  
+  h1 {
+    font-family: 'Anton', sans-serif;
+    object-fit: contain;
+  }
+
+  img {
+    width: 800px;
+    height: 532px;
+    width: 100%;
+    object-fit: contain;
+      }
+    .text {
+        text-align: justify;
+        font-size: 3rem;
+        letter-spacing: 0.6px;
+        object-fit: contain;
+      }
+
+  .hero {
+    grid-column: 1 / -1;
+    position: relative;
+    object-fit: contain;
+    
+  }
+   .hero-title {
+    text-align: center;
+    color: orangered;
+    font-size: 8rem;
+    object-fit: contain;
+  }
+  
+  .hero-subtitles {
+    font-size: 2.4rem;
+    color: orangered;
+    text-align: center;
+    object-fit: contain;
+  }
+.first-paragraph{
+    position: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+  .content-list{
+    position: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 3rem;
+    letter-spacing: 0.6px;
+    text-align: center;
+    object-fit: contain;
+  }
+  .section-line {
+    height: 1px;
+    background-color: rgb(16, 1, 32);
+    border-color: rgb(16, 1, 32);
+    line-height: 15px;
+    object-fit: contain;
+  }
+  hr{
+    margin-top: 25px;
+    object-fit: contain;
+  }
+ h2{
+  position: center;
+  font-size: 3rem;
+  letter-spacing: 0.6px;
+  text-align: center;
+  object-fit: contain;
+ }
+ .list-suggestion{
+  position: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 3rem;
+  letter-spacing: 0.6px;
+  text-align: left;
+  object-fit: contain;
+ }
+ .list-explanation{
+  position: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 3rem;
+  letter-spacing: 0.6px;
+  text-align: left;
+  object-fit: contain;
+ }
+ .list-title{
+  position: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 3rem;
+  letter-spacing: 0.6px;
+  text-align: left;
+  
+ }
+ .cat-breed-1{
+  width: 300px;
+  height: 232px;
+ }
+ .cat-breed{
+   border-width: 20px ;
+   font-size: 3rem;
+   color: rgb(253, 250, 249);
+   float: left;
+   margin-right: 1rem;
+ }
+ .question{
+  position: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 3rem;
+  letter-spacing: 0.6px;
+  text-align: left;
+  object-fit: contain;
+ }
+ button{
+  position: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 2.5rem;
+  letter-spacing: 0.6px;
+  text-align: left;
+  object-fit: contain;
+  background-color: red;
+ }
+ /* (Your existing CSS) */
+
+/* Styles for the quiz result popup */
+#quiz-results {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+  animation: popup 0.5s ease-out;
+}
+
+/* Balloons styles */
+.balloons {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  bottom: -100px;
+  animation: float 4s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.balloon.one {
+  left: 20%;
+  animation-duration: 5s;
+}
+
+.balloon.two {
+  left: 50%;
+  animation-duration: 6s;
+  background-color: #48dbfb;
+}
+
+.balloon.three {
+  left: 80%;
+  animation-duration: 4s;
+  background-color: #feca57;
+}
+
+/* Popup animation */
+@keyframes popup {
+  0% {
+      transform: translate(-50%, -50%) scale(0.7);
+      opacity: 0;
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+  }
+}
+
+/* Balloons floating animation */
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-200px) scale(1.1);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Styling the quiz form */
+#quiz-form {
+  margin-bottom: 20px;
+}
